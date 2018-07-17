@@ -24,5 +24,4 @@ VOLUME /export_results
 
 ENTRYPOINT ["./entrypoint.sh"]
 
-ENV hc_uri ${protocol}://127.0.0.1:${listening_port}/version
-HEALTHCHECK CMD curl -k ${hc_uri} | grep -q '"artifact": "usgs-wma-mlr-validator"' || exit 1
+HEALTHCHECK CMD curl -k ${protocol}://127.0.0.1:${listening_port}/version | grep -q '"artifact": "${artifact_id}"' || exit 1
