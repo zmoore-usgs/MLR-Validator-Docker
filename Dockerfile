@@ -1,4 +1,5 @@
 FROM cidasdpdasartip.cr.usgs.gov:8447/mlr-python-base-docker:latest
+LABEL maintainer="gs-w_eto_eb_federal_employees@usgs.gov"
 
 ENV repo_name=usgs-python-centralized
 ENV artifact_id=usgs-wma-mlr-validator
@@ -12,8 +13,7 @@ ENV CERT_IMPORT_DIRECTORY=/
 COPY import_certs.sh import_certs.sh
 COPY entrypoint.sh entrypoint.sh
 
-RUN ["chmod", "+x", "import_certs.sh", "entrypoint.sh"] && \
-	["./import_certs.sh"]
+RUN ["chmod", "+x", "import_certs.sh", "entrypoint.sh", "./import_certs.sh"]
 
 COPY gunicorn_config.py /local/gunicorn_config.py
 RUN pip3 install  gunicorn==19.7.1 &&\
@@ -21,7 +21,6 @@ RUN pip3 install  gunicorn==19.7.1 &&\
 
 
 VOLUME /export_results
-EXPOSE ${listening_port}
 
 ENTRYPOINT ["./entrypoint.sh"]
 
