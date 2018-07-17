@@ -8,7 +8,7 @@ ENV listening_port=7010
 ENV protocol=https
 
 ENV authorized_roles=test_default
-ENV CERT_IMPORT_DIRECTORY=/
+ENV CERT_IMPORT_DIRECTORY=/certificates
 
 COPY import_certs.sh import_certs.sh
 COPY entrypoint.sh entrypoint.sh

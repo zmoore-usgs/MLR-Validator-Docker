@@ -5,7 +5,7 @@ Docker configuration to deploy the MLR-Validator service in a Docker container
 
 
 The two docker files provided pull the artifact from cida.usgs.gov/artifactory. The artfact_version should be the version of the usgs-wma-mlr-validator that you want to be used in the docker container. The ENV 'listening_port' can be specified and defaults to 7010. This port will be exposed by the container. 
-To build within the DOI network place the DOI cert in '/DOIRootCA.crt'. Below is an example of how to build.
+To build within the DOI network place the DOI cert in '/certificates/DOIRootCA.crt'. Below is an example of how to build.
 
 To run, you can specify a bind mount on the host system where you want the exported files written (the src part of the bind), and create a compose.env file locally and set the ENV variables as desired:
 ```
