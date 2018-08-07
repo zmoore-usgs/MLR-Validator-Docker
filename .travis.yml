@@ -30,6 +30,8 @@ install:
   - docker-compose -f docker-compose.yml up -d --build
 
 script:
+  # Not yet working
+  # - sleep 5 && curl -k -s "https://$(ip -4 addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'):7010/version" | grep -q "usgs-wma-mlr-validator"
   - docker ps -a | grep -q "${DOCKER_IMAGE}"
   - cd docker-bench-security
   - sudo sh docker-bench-security.sh -c container_images
