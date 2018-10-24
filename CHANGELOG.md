@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Changed
-- kmschoep@usgs.gov: Dockerfile, set artifact version to 0.8.0dev0
+- zmoore@usgs.gov: Dockerfile, set artifact version to 0.10.0dev0
+
+## 0.9.0 2018-10-24
+### Changed
+- zmoore@usgs.gov: Dockerfile, set artifact version to 0.9.0
 
 ## 0.8.0 2018-09-13
 ### Changed
