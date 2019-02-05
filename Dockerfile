@@ -3,7 +3,7 @@ LABEL maintainer="gs-w_eto_eb_federal_employees@usgs.gov"
 
 ENV repo_name=usgs-python-centralized
 ENV artifact_id=usgs-wma-mlr-validator
-ENV artifact_version=0.12.0
+ENV artifact_version=0.13.0.dev0
 ENV listening_port=7010
 ENV protocol=https
 ENV oauth_server_token_key_url=https://example.gov/oauth/token_key
